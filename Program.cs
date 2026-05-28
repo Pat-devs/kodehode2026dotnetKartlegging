@@ -1,31 +1,14 @@
-﻿// Collections (objects, lists, arrays and such structures) in C# 
-// in js we could
-// let todolist = ["task", "anohter task", "osv"]
+﻿// Console based todolist app (CLI-app) Command Line Interface
 
-// in C#
+// data related things
+using System.Diagnostics.Tracing;
+
 List<string> todolist = new List<string>();
-
+// add a few items:
 todolist.Add("eat");
 todolist.Add("sleep");
 todolist.Add("code");
-
-// loops in (forof array):
-// forof (let element of array) etc....
-
-// in C#
-
-foreach (var task in todolist)
-{
-    Console.WriteLine(task);
-}
-
-// enkel string variable
-//string name = "value"
-
-
-
-
-// Console based todolist app (CLI-app) Command Line Interface
+//
 
 // I. Show user initial UI menu
 
@@ -35,12 +18,7 @@ foreach (var task in todolist)
 // 3. Delete a task
 // 4. Exit
 
-Console.WriteLine("Todolist menu");
 
-Console.WriteLine("1. Add task");
-Console.WriteLine("2. List all tasks");
-Console.WriteLine("3. Delete a task");
-Console.WriteLine("4. Exit");
 
 bool running = true;
 
@@ -48,17 +26,30 @@ bool running = true;
 
 while(running)
 { 
+    Console.WriteLine("Todolist menu");
+
+    Console.WriteLine("1. Add task");
+    Console.WriteLine("2. List all tasks");
+    Console.WriteLine("3. Delete a task");
+    Console.WriteLine("4. Exit");
 
     string choice = Console.ReadLine();
 
     Console.WriteLine("user chose: " + choice);
 
-    if (choice == "1") 
+    if (choice == "1") // 1. Add a task
     {
-        Console.WriteLine("user entered one");
+        Console.WriteLine("Enter what you want to do: ");
+        string newTodo = Console.ReadLine();
+        todolist.Add(newTodo);    
+
     }
-    else if (choice == "2")
+    else if (choice == "2") // 2. List all tasks
     {
+        foreach (var task in todolist)
+        {
+            Console.WriteLine(task);
+        }    
     }
     else if (choice == "3")
     {
