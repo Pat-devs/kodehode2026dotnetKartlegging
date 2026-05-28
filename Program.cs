@@ -19,3 +19,10 @@ Console.WriteLine("4. Exit");
 string choice = Console.ReadLine();
 
 Console.WriteLine("user chose: " + choice);
+
+if (true) 
+{ // curly bracken must be on a new line or else .net developers will be dissapointed.
+
+// nothing here
+    // code here
+}
