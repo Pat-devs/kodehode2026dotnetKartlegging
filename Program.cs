@@ -15,14 +15,27 @@ Console.WriteLine("2. List all tasks");
 Console.WriteLine("3. Delete a task");
 Console.WriteLine("4. Exit");
 
-// II. Await user input
-string choice = Console.ReadLine();
+// II. Await user input (in an infinite loop)
 
-Console.WriteLine("user chose: " + choice);
+while(true)
+{ 
 
-if (true) 
-{ // curly bracken must be on a new line or else .net developers will be dissapointed.
+    string choice = Console.ReadLine();
 
-// nothing here
-    // code here
+    Console.WriteLine("user chose: " + choice);
+
+    if (choice == "1") 
+    {
+        Console.WriteLine("user entered one");
+    }
+    else if (choice == "2")
+    {
+    }
+    else if (choice == "3")
+    {
+    }
+    else if (choice == "4")
+    {
+        // terminate program (in this case no code needed)
+    }
 }
