@@ -15,9 +15,11 @@ Console.WriteLine("2. List all tasks");
 Console.WriteLine("3. Delete a task");
 Console.WriteLine("4. Exit");
 
+bool running = true;
+
 // II. Await user input (in an infinite loop)
 
-while(true)
+while(running)
 { 
 
     string choice = Console.ReadLine();
@@ -37,5 +39,6 @@ while(true)
     else if (choice == "4")
     {
         // terminate program (in this case no code needed)
+        running = false;
     }
 }
