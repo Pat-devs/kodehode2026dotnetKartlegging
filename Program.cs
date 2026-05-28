@@ -1,4 +1,31 @@
-﻿// Console based todolist app (CLI-app) Command Line Interface
+﻿// Collections (objects, lists, arrays and such structures) in C# 
+// in js we could
+// let todolist = ["task", "anohter task", "osv"]
+
+// in C#
+List<string> todolist = new List<string>();
+
+todolist.Add("eat");
+todolist.Add("sleep");
+todolist.Add("code");
+
+// loops in (forof array):
+// forof (let element of array) etc....
+
+// in C#
+
+foreach (var task in todolist)
+{
+    Console.WriteLine(task);
+}
+
+// enkel string variable
+//string name = "value"
+
+
+
+
+// Console based todolist app (CLI-app) Command Line Interface
 
 // I. Show user initial UI menu
 
