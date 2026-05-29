@@ -8,19 +8,7 @@ todolist.Add("sleep");
 todolist.Add("code");
 //
 
-// I. Show user initial UI menu
-
-// Todolist Menu:
-// 1. Add task
-// 2. List all tasks
-// 3. Delete a task
-// 4. Exit
-
-
-
 bool running = true;
-
-// II. Await user input (in an infinite loop)
 
 while(running)
 { 
