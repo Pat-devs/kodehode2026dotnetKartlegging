@@ -51,20 +51,18 @@ void ShowMenu()
 void AddTask()
 {
     Console.WriteLine("Enter what you want to do: ");
-    // Create a new instance of TodoItem
-    //TodoItem newTodo = new TodoItem();
-    // put data in the new todo
-    // invoke AddTodo method from todoService instance:
     todoService.AddTodo(Console.ReadLine());
-
-
-    // todolist.Add(newTodo);
 }
 
-void ListAllTasks()
+void ListAllTasks() // bug: we dont get the list of todos as intended
 {
     Console.WriteLine();
-    foreach (TodoItem task in todolist)
+    // get the todolist items from the the service and structre them locally (here) as List of <TodoItem>'s
+    List<TodoItem> todos = todoService.GetAllTodos();
+
+    Console.WriteLine(todos);
+
+    foreach (TodoItem task in todos)
     {
         Console.WriteLine(task.TaskName);
     } 
@@ -72,7 +70,7 @@ void ListAllTasks()
 
 void DeleteTask()
 {
-    
+    todoService.DeleteTodo();
 }
 
 void ExitTodoApp()
