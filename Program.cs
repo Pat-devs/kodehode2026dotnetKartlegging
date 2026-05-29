@@ -1,6 +1,5 @@
 ﻿// Console based todolist app (CLI-app) Command Line Interface
 // data related things
-using System.Reflection.Metadata.Ecma335;
 
 List<string> todolist = new List<string>();
 // add a few items:
@@ -33,10 +32,7 @@ while(running)
 
     if (choice == "1") // 1. Add a task
     {
-        Console.WriteLine("Enter what you want to do: ");
-        string newTodo = Console.ReadLine();
-        todolist.Add(newTodo);    
-
+        AddTask();    
     }
     else if (choice == "2") // 2. List all tasks
     {
@@ -66,4 +62,11 @@ void ShowMenu()
     Console.WriteLine("3. Delete a task");
     Console.WriteLine("4. Exit");
     Console.WriteLine("Enter an option: ");
+}
+
+void AddTask()
+{
+    Console.WriteLine("Enter what you want to do: ");
+    string newTodo = Console.ReadLine();
+    todolist.Add(newTodo);
 }
