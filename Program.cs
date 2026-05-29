@@ -1,24 +1,11 @@
 ﻿// Console based todolist app (CLI-app) Command Line Interface
-// data related things
 
+// Separation of Concerns
 
-// Create a new variable of type "TodoItem"
-// And name it "todo"
-// then use the "new TodoItem()" to produce an new instance of a todoitem
 
 
 
 List<TodoItem> todolist = new List<TodoItem>();
-// add a few items:
-// todolist.Add(new TodoItem());
-//
-
-
-
-
-// to create a custom type, we can use a "class" structure
-
-
 
 bool running = true;
 
