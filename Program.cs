@@ -2,14 +2,15 @@
 // data related things
 
 
+// Create a new variable of type "TodoItem"
+// And name it "todo"
+// then use the "new TodoItem()" to produce an new instance of a todoitem
 
-using System.Linq.Expressions;
 
-List<string> todolist = new List<string>();
+
+List<TodoItem> todolist = new List<TodoItem>();
 // add a few items:
-todolist.Add("eat");
-todolist.Add("sleep");
-todolist.Add("code");
+// todolist.Add(new TodoItem());
 //
 
 
@@ -62,7 +63,12 @@ void ShowMenu()
 void AddTask()
 {
     Console.WriteLine("Enter what you want to do: ");
-    string newTodo = Console.ReadLine();
+    // Create a new instance of TodoItem
+    TodoItem newTodo = new TodoItem();
+    // put data in the new todo
+    newTodo.TaskName = Console.ReadLine();
+
+
     todolist.Add(newTodo);
 }
 
@@ -85,16 +91,3 @@ void ExitTodoApp()
     running = false;
 }
 
-// Create a new variable of type "TodoItem"
-// And name it "todo"
-// then use the "new TodoItem()" to produce an new instance of a todoitem
-TodoItem todo = new TodoItem();
-
-todo.TaskName = "eat";
-
-
-TodoItem todoAlso = new TodoItem();
-
-todoAlso.TaskName = "code";
-
-Console.WriteLine(todoAlso.TaskName);
