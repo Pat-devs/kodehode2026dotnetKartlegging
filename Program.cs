@@ -1,8 +1,5 @@
 ﻿// Console based todolist app (CLI-app) Command Line Interface
-
 // data related things
-using System.Diagnostics.Tracing;
-
 List<string> todolist = new List<string>();
 // add a few items:
 todolist.Add("eat");
@@ -26,13 +23,14 @@ bool running = true;
 
 while(running)
 { 
+    Console.WriteLine();
     Console.WriteLine("Todolist menu");
 
     Console.WriteLine("1. Add task");
     Console.WriteLine("2. List all tasks");
     Console.WriteLine("3. Delete a task");
     Console.WriteLine("4. Exit");
-
+    Console.WriteLine("Enter an option: ");
     string choice = Console.ReadLine();
 
     Console.WriteLine("user chose: " + choice);
@@ -46,6 +44,7 @@ while(running)
     }
     else if (choice == "2") // 2. List all tasks
     {
+         Console.WriteLine();
         foreach (var task in todolist)
         {
             Console.WriteLine(task);
