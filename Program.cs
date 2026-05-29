@@ -75,9 +75,9 @@ void AddTask()
 void ListAllTasks()
 {
     Console.WriteLine();
-    foreach (var task in todolist)
+    foreach (TodoItem task in todolist)
     {
-        Console.WriteLine(task);
+        Console.WriteLine(task.TaskName);
     } 
 }
 
