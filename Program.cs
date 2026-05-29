@@ -36,19 +36,15 @@ while(running)
     }
     else if (choice == "2") // 2. List all tasks
     {
-         Console.WriteLine();
-        foreach (var task in todolist)
-        {
-            Console.WriteLine(task);
-        }    
+        ListAllTasks();
     }
-    else if (choice == "3")
+    else if (choice == "3") // 3. Delete a task
     {
+        DeleteTask();
     }
-    else if (choice == "4")
+    else if (choice == "4") // 4. Exit 
     {
-        // terminate program (in this case no code needed)
-        running = false;
+        ExitTodoApp();
     }
 }
 
@@ -69,4 +65,23 @@ void AddTask()
     Console.WriteLine("Enter what you want to do: ");
     string newTodo = Console.ReadLine();
     todolist.Add(newTodo);
+}
+
+void ListAllTasks()
+{
+    Console.WriteLine();
+    foreach (var task in todolist)
+    {
+        Console.WriteLine(task);
+    } 
+}
+
+void DeleteTask()
+{
+    
+}
+
+void ExitTodoApp()
+{
+    running = false;
 }
