@@ -1,12 +1,23 @@
 ﻿// Console based todolist app (CLI-app) Command Line Interface
 // data related things
 
+
+
+using System.Linq.Expressions;
+
 List<string> todolist = new List<string>();
 // add a few items:
 todolist.Add("eat");
 todolist.Add("sleep");
 todolist.Add("code");
 //
+
+
+
+
+// to create a custom type, we can use a "class" structure
+
+
 
 bool running = true;
 
@@ -73,3 +84,17 @@ void ExitTodoApp()
 {
     running = false;
 }
+
+// Create a new variable of type "TodoItem"
+// And name it "todo"
+// then use the "new TodoItem()" to produce an new instance of a todoitem
+TodoItem todo = new TodoItem();
+
+todo.TaskName = "eat";
+
+
+TodoItem todoAlso = new TodoItem();
+
+todoAlso.TaskName = "code";
+
+Console.WriteLine(todoAlso.TaskName);
