@@ -1,13 +1,14 @@
 ﻿// Console based todolist app (CLI-app) Command Line Interface
 
 // Separation of Concerns
+// create an instance of the TodoService
+TodoService todoService = new TodoService();
 
 
 
 
-List<TodoItem> todolist = new List<TodoItem>();
 
-bool running = true;
+bool running = true; // UI 
 
 while(running)
 { 
@@ -51,12 +52,13 @@ void AddTask()
 {
     Console.WriteLine("Enter what you want to do: ");
     // Create a new instance of TodoItem
-    TodoItem newTodo = new TodoItem();
+    //TodoItem newTodo = new TodoItem();
     // put data in the new todo
-    newTodo.TaskName = Console.ReadLine();
+    // invoke AddTodo method from todoService instance:
+    todoService.AddTodo(Console.ReadLine());
 
 
-    todolist.Add(newTodo);
+    // todolist.Add(newTodo);
 }
 
 void ListAllTasks()
